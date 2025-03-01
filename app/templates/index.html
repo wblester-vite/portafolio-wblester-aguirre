@@ -184,6 +184,38 @@
     margin: 40px auto;
 }
 
+@media (max-width: 768px) {
+    /* Reducir padding solo en móviles */
+    #inicio {
+        padding: 50px 20px;
+    }
+
+    /* Ajustar el tamaño del texto */
+    .big-text {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* Evitar que la imagen de perfil se salga */
+    .profile-img {
+        position: relative;
+        max-width: 80%;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Ajustar los contenedores para que no desborden */
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+
 
 
     </style>
