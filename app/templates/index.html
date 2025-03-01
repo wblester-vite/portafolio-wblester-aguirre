@@ -29,7 +29,37 @@
     padding: 200px;
 }
 #sobre-mi {
-    background-color: rgb(232, 235, 232);
+    padding: 80px 0; /* Mayor espaciado arriba y abajo */
+}
+
+#proyectos {
+    padding: 100px 0; /* Ajusta el espacio de "Proyectos" */
+    background-color: #f0f0f0; /* Un tono más claro para una mejor transición */
+}
+
+.separador-linea {
+    width: 60%;
+    height: 2px;
+    background-color: #bbb;
+    margin: 40px auto;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+
+.card {
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+
 }
 
 .small-text {
@@ -115,13 +145,45 @@
     margin-top: 10px;
 }
 
-#contacto img {
-    transition: transform 0.3s ease-in-out;
+#contacto .d-flex a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Tamaño del círculo */
+    height: 60px;
+    margin: 0 10px; /* Espaciado uniforme */
+    background-color: white; /* Fondo del círculo */
+    border-radius: 50%; /* Hace los íconos circulares */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Agrega un efecto sutil */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-#contacto img:hover {
-    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+#contacto .d-flex a:hover {
+    background-color: #000; /* Cambia el fondo al pasar el mouse */
+    transform: scale(1.2); /* Efecto de agrandamiento */
 }
+
+#contacto .d-flex a img {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    filter: invert(0); /* Mantiene los colores originales */
+    transition: filter 0.3s ease-in-out;
+}
+
+#contacto .d-flex a:hover img {
+    filter: invert(1); /* Hace los íconos blancos al pasar el mouse */
+}
+
+
+}
+
+
+.separador-discontinuo {
+    width: 80%;
+    height: 2px;
+    border-top: 2px dashed #aaa;
+    margin: 40px auto;
+}
+
 
 
     </style>
@@ -153,10 +215,13 @@
     </div>
 </section>
 
+
+
+
      <!-- Sección Sobre mí -->
     <section id="sobre-mi" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4 fw-bold">Sobre mí</h2>
+            <h2 class="text-center mb-4 fw-bold">SOBRE MÍ</h2>
             <p class="text-center">
                 Soy un actuario con experiencia en análisis de datos, machine learning y business intelligence.
                 Me apasiona la optimización de procesos y la extracción de insights valiosos para la toma de decisiones.
@@ -165,16 +230,13 @@
         </div>
     </section>
 
-
-
-
-
+    <div class="separador-discontinuo"></div>
 
 
     <!-- Sección Proyectos -->
     <section id="proyectos" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4 fw-bold">Proyectos</h2>
+            <h2 class="text-center mb-4 fw-bold">PROYECTOS</h2>
             <div class="row">
                 <!-- Proyecto 1 -->
                 <div class="col-md-4 mb-4">
@@ -198,19 +260,45 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Automatización con Python</h5>
-                            <p class="card-text">Scripts para automatización de ETL con Python.</p>
-                            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalProyecto3">Ver detalles</button>
-                        </div>
-                    </div>
-                </div>
+               <!-- Proyecto 3 - Análisis de Rentabilidad y Expansión en Seguros -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Análisis de Rentabilidad y Expansión en Seguros</h5>
+            <p class="card-text">Dashboard en Power BI con análisis de rentabilidad, siniestros y crecimiento en seguros.</p>
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalDashboardSeguro">Ver Dashboard</button>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
+
+
+
+
+        <!-- Sección Contacto -->
+<section id="contacto" class="py-5 text-center">
+    <h2 class="fw-bold">CONTACTO</h2>
+    <p>Encuéntrame en:</p>
+    <div class="d-flex justify-content-center gap-4 mt-3">
+        <!-- GitHub -->
+        <a href="https://github.com/wblester-vite" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="50">
+        </a>
+
+        <!-- iCloud (Correo) -->
+        <a href="mailto:wblester.vite@icloud.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/icloud.svg" alt="iCloud" width="50">
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/wblester-aguirre-vite-647b5b121" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="50">
+        </a>
+    </div>
+</section>
 
    <!-- MODAL CON CARRUSEL PARA PROYECTO 1 -->
 
@@ -226,22 +314,22 @@
                     <div id="carouselProyecto1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ url_for('static', filename='images/fraud1.png') }}" class="d-block w-100" alt="Imagen 1">
+                                <img src="{{ url_for('static', filename='images/1.png') }}" class="d-block w-100" alt="Imagen 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/fraud2.png') }}" class="d-block w-100" alt="Imagen 2">
+                                <img src="{{ url_for('static', filename='images/2.png') }}" class="d-block w-100" alt="Imagen 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/fraud3.png') }}" class="d-block w-100" alt="Imagen 3">
+                                <img src="{{ url_for('static', filename='images/3.png') }}" class="d-block w-100" alt="Imagen 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/fraud4.png') }}" class="d-block w-100" alt="Imagen 4">
+                                <img src="{{ url_for('static', filename='images/4.png') }}" class="d-block w-100" alt="Imagen 4">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/fraud5.png') }}" class="d-block w-100" alt="Imagen 5">
+                                <img src="{{ url_for('static', filename='images/5.png') }}" class="d-block w-100" alt="Imagen 5">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/fraud6.png') }}" class="d-block w-100" alt="Imagen 6">
+                                <img src="{{ url_for('static', filename='images/6.png') }}" class="d-block w-100" alt="Imagen 6">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
@@ -256,7 +344,7 @@
                         <p id="descripcionProyecto1">Análisis exploratorio del dataset.</p>
                     </div>
                     <div class="mt-3 text-center">
-                        <a href="#" class="btn btn-primary" id="notebookLink" target="_blank">Ver Notebook Completo</a>
+                        <a href="https://github.com/wblester-vite/Fraud-Challenge-ML-Exploracion-y-Prediccion/blob/main/Deteccion_de_Fraude.ipynb" class="btn btn-primary" id="notebookLink" target="_blank">Ver Notebook Completo</a>
                     </div>
                 </div>
             </div>
@@ -299,22 +387,22 @@
                     <div id="carouselProyecto2" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ url_for('static', filename='images/series1.png') }}" class="d-block w-100" alt="Imagen 1">
+                                <img src="{{ url_for('static', filename='images/1.png') }}" class="d-block w-100" alt="Imagen 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/series2.png') }}" class="d-block w-100" alt="Imagen 2">
+                                <img src="{{ url_for('static', filename='images/2.png') }}" class="d-block w-100" alt="Imagen 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/series3.png') }}" class="d-block w-100" alt="Imagen 3">
+                                <img src="{{ url_for('static', filename='images/3.png') }}" class="d-block w-100" alt="Imagen 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/series4.png') }}" class="d-block w-100" alt="Imagen 4">
+                                <img src="{{ url_for('static', filename='images/4.png') }}" class="d-block w-100" alt="Imagen 4">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/series5.png') }}" class="d-block w-100" alt="Imagen 5">
+                                <img src="{{ url_for('static', filename='images/5.png') }}" class="d-block w-100" alt="Imagen 5">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/series6.png') }}" class="d-block w-100" alt="Imagen 6">
+                                <img src="{{ url_for('static', filename='images/6.png') }}" class="d-block w-100" alt="Imagen 6">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto2" data-bs-slide="prev">
@@ -329,69 +417,114 @@
                         <p id="descripcionProyecto2">Introducción al proyecto.</p>
                     </div>
                     <div class="mt-3 text-center">
-                        <a href="#" class="btn btn-primary" id="notebookLink2" target="_blank">Ver Notebook Completo</a>
+                        <a href="https://github.com/wblester-vite/Series_Temporales_Proyecto/blob/main/Forecasting_Series_Temporales.ipynb" class="btn btn-primary" id="notebookLink2" target="_blank">Ver Notebook Completo</a>
                     </div>
-                </div>
-            </div>
-
-    <!-- MODAL CON CARRUSEL PARA PROYECTO 3 -->
-    <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyecto3Label">Automatización con Python</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="carouselProyecto3" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ url_for('static', filename='images/5.png') }}" class="d-block w-100" alt="Automatización 1">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Automatización de procesos ETL.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/6.png') }}" class="d-block w-100" alt="Automatización 2">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Integración de datos automatizada.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto3" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto3" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div>
-                    <p class="mt-3">Script en Python para automatizar flujos de trabajo, mejorando la eficiencia operativa.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Sección Contacto -->
-<section id="contacto" class="py-5 text-center">
-    <h2 class="fw-bold">Contacto</h2>
-    <p>Encuéntrame en:</p>
-    <div class="d-flex justify-content-center gap-4 mt-3">
-        <!-- GitHub -->
-        <a href="https://github.com/tu-usuario" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="50">
-        </a>
+   <!-- MODAL CON CARRUSEL PARA PROYECTO 3 -->
+<div class="modal fade" id="modalDashboardSeguro" tabindex="-1" aria-labelledby="modalDashboardSeguroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDashboardSeguroLabel">Análisis de Rentabilidad y Expansión en Seguros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselDashboardSeguro" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Imagen 1: Rentabilidad de Agencias -->
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', filename='images/Dash 1.png') }}" class="d-block w-100" alt="Dashboard Rentabilidad de Agencias">
+                        </div>
+                        <!-- Imagen 2: Tendencias de Siniestros -->
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/Dash 2.png') }}" class="d-block w-100" alt="Dashboard Tendencias de Siniestros">
+                        </div>
+                        <!-- Imagen 3: Crecimiento y Expansión -->
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/Dash 3.png') }}" class="d-block w-100" alt="Dashboard Crecimiento y Expansión">
+                        </div>
+                        <!-- Imagen 4: Tecnologías Usadas en el Dashboard -->
+                        <div class="carousel-item">
+                            <div class="text-center p-4">
+                                <h3>🔧 Tecnologías Usadas en el Dashboard</h3>
+                                <div class="d-flex justify-content-center">
+                                    <ul class="list-unstyled text-start">
+                                        <li>✅ <strong>Power BI</strong> - Modelado de datos y visualización</li>
+                                        <li>✅ <strong>DAX</strong> - Cálculos avanzados de siniestralidad y rentabilidad</li>
+                                        <li>✅ <strong>Modelo Estrella</strong> - Optimización de consultas</li>
+                                        <li>✅ <strong>Filtros y Segmentaciones</strong> - Interacción dinámica</li>
+                                        <li>✅ <strong>UI/UX</strong> - Diseño intuitivo para mejorar la experiencia de usuario</li>
+                                    </ul>
+                                </div>
+                             </div>
+                        </div>
 
-        <!-- iCloud (Correo) -->
-        <a href="mailto:wblester.vite@icloud.com" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/icloud.svg" alt="iCloud" width="50">
-        </a>
+                        <!-- Imagen 5: Fuente del Dataset + Enlace a GitHub -->
+                        <div class="carousel-item">
+                            <div class="text-center p-4">
+                             <h3>📊 Fuente de Datos</h3>
+                                <p>Los datos utilizados en este análisis provienen de:</p>
+                                <a href="https://www.kaggle.com/datasets/moneystore/agencyperformance" target="_blank" class="btn btn-primary">
+                                 📂 Kaggle - Agency Performance Dataset
+                                </a>
+                                <hr>
+                                <h3>💻 Código Fuente</h3>
+                                <p>Descarga el dashboard en mi repositorio de GitHub:</p>
+                                <a href="https://github.com/wblester-vite/Insurance_Insights_Dashboard" target="_blank" class="btn btn-dark">
+                                    🔗 Ver Proyecto en GitHub
+                                </a>
+                            </div>
+                        </div>
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="50">
-        </a>
+                    <!-- Botones de navegación -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDashboardSeguro" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDashboardSeguro" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <!-- 📌 Descripción dinámica debajo del carrusel -->
+                <div class="mt-3 text-center">
+                    <p id="descripcionDashboard">Este dashboard evalúa la rentabilidad de las agencias de seguros mediante el análisis de primas emitidas y siniestralidad.
+        Incluye indicadores clave como el ratio de siniestralidad, rentabilidad neta y ranking de agencias más rentables.
+        Además, se visualiza la distribución geográfica de la prima emitida para optimizar estrategias de pricing y distribución de productos.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript para cambiar la descripción al cambiar de imagen -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var carousel = document.querySelector("#carouselDashboardSeguro");
+        var descripcion = document.querySelector("#descripcionDashboard");
+
+        var descripciones = [
+            "Este dashboard evalúa la rentabilidad de las agencias de seguros mediante el análisis de primas emitidas y siniestralidad. Incluye indicadores clave como el ratio de siniestralidad, rentabilidad neta y ranking de agencias más rentables. Además, se visualiza la distribución geográfica de la prima emitida para optimizar estrategias de pricing y distribución de productos.",
+            "Este dashboard analiza la evolución de los siniestros por tipo de producto y su variación anual. Se incluyen métricas como la frecuencia de siniestros, el monto promedio por siniestro y el ratio de siniestralidad. Un mapa geográfico permite identificar regiones con mayor impacto de siniestralidad, proporcionando insights clave para mejorar las estrategias de suscripción y ajuste de precios.",
+            "Este dashboard identifica oportunidades de crecimiento y rentabilidad en el sector asegurador. Analiza el crecimiento de primas por estado, la rentabilidad de productos y el margen de rentabilidad. Un gráfico de dispersión compara productos en términos de rentabilidad y crecimiento, ayudando a definir estrategias de inversión y expansión en mercados con mayor potencial.",
+            "",
+            "Fuente de los datos utilizados en este análisis."
+        ];
+
+        carousel.addEventListener("slid.bs.carousel", function(event) {
+            var index = event.to;
+            descripcion.textContent = descripciones[index];
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Bootstrap JS (Debe estar en la parte inferior del body) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
