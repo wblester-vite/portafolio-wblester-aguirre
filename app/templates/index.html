@@ -332,76 +332,82 @@
     </div>
 </section>
 
-   <!-- MODAL CON CARRUSEL PARA PROYECTO 1 -->
+<!-- MODAL CON CARRUSEL PARA PROYECTO 1 -->
 
-    <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyecto1Label">Detección de Fraude con Machine Learning</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Carrusel -->
-                    <div id="carouselProyecto1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ url_for('static', filename='images/1.png') }}" class="d-block w-100" alt="Imagen 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/2.png') }}" class="d-block w-100" alt="Imagen 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/3.png') }}" class="d-block w-100" alt="Imagen 3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/4.png') }}" class="d-block w-100" alt="Imagen 4">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/5.png') }}" class="d-block w-100" alt="Imagen 5">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='images/6.png') }}" class="d-block w-100" alt="Imagen 6">
+<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProyecto1Label">Detección de Fraude con Machine Learning</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carrusel -->
+                <div id="carouselProyecto1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Imágenes del Proyecto -->
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', filename='images/plot_2.png') }}" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_3.png') }}" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_4.png') }}" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_5.png') }}" class="d-block w-100" alt="Imagen 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_6.png') }}" class="d-block w-100" alt="Imagen 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_7.png') }}" class="d-block w-100" alt="Imagen 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_8.png') }}" class="d-block w-100" alt="Imagen 7">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/plot_9.png') }}" class="d-block w-100" alt="Imagen 8">
+                        </div>
+                        <!-- Slide de Tecnologías Utilizadas -->
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column align-items-center justify-content-center" style="height: 400px;">
+                                <h3 class="text-center">Tecnologías Utilizadas</h3>
+                                <p class="text-center">🐍 Python | 📊 Pandas | 🔢 Scikit-learn | 📉 Matplotlib | 📌 Seaborn</p>
+                                <p class="text-center">🤖 Machine Learning | ⚙ Feature Engineering</p>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
-                    <!-- Descripción dinámica -->
-                    <div class="mt-3">
-                        <p id="descripcionProyecto1">Análisis exploratorio del dataset.</p>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <a href="https://github.com/wblester-vite/Fraud-Challenge-ML-Exploracion-y-Prediccion/blob/main/Deteccion_de_Fraude.ipynb" class="btn btn-primary" id="notebookLink" target="_blank">Ver Notebook Completo</a>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <!-- Descripción fija -->
+                <div class="mt-3">
+                    <h4>- Descripción del Proyecto</h4>
+                    <p>Este proyecto tiene como objetivo construir un modelo de Machine Learning para detectar fraudes en transacciones financieras. Se realizó un análisis exploratorio de datos (EDA), selección de características relevantes y entrenamiento de un modelo de **Regresión Logística**. El modelo fue evaluado utilizando métricas clave como precisión, recall y curva ROC.</p>
+                    <h4>- Pasos del Proyecto</h4>
+                    <ul>
+                        <li>📥 Carga y exploración de datos (EDA) para entender la distribución y patrones de las transacciones.</li>
+                        <li>⚙ Preprocesamiento y Feature Engineering: normalización de datos y selección de variables más influyentes.</li>
+                        <li>🤖 Entrenamiento y evaluación del modelo de Regresión Logística.</li>
+                        <li>📈 Análisis de resultados: evaluación con matriz de confusión y curva ROC.</li>
+                    </ul>
+                    <h4>- Resultados</h4>
+                    <p>El modelo de Regresión Logística logró una precisión del **99%** en la detección de transacciones legítimas y un recall del **87%** en transacciones fraudulentas. Se identificaron las características más influyentes en la detección de fraudes y se generó una matriz de confusión para evaluar su desempeño.</p>
+                </div>
+                <div class="mt-3 text-center">
+                    <a href="https://github.com/wblester-vite/Fraud-Challenge-ML-Exploracion-y-Prediccion/blob/main/Deteccion_de_Fraude.ipynb" class="btn btn-primary" target="_blank">Ver Notebook Completo</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var carousel = document.querySelector("#carouselProyecto1");
-            var descripcion = document.querySelector("#descripcionProyecto1");
-            var descripciones = [
-                "Este proyecto tiene como objetivo construir un modelo de Machine Learning para detectar fraudes en transacciones financieras.",
-                "Se utilizó un conjunto de datos con 150,000 transacciones financieras. Se realizó un análisis exploratorio para identificar variables relevantes y detectar valores nulos.",
-                "Se dividieron los datos en conjuntos de entrenamiento y prueba. Además, se aplicó normalización para mejorar el desempeño del modelo.",
-                "Se utilizó un modelo de regresión logística para predecir si una transacción es fraudulenta. El modelo fue entrenado y probado con métricas de rendimiento.",
-                "Se evaluó el modelo utilizando una matriz de confusión y la curva ROC. Las métricas obtenidas permiten identificar la precisión y recall del modelo.",
-                "El modelo desarrollado permite detectar patrones en transacciones financieras para prevenir fraudes. En futuras mejoras, se pueden probar otros algoritmos para mejorar la precisión."
-            ];
-
-            carousel.addEventListener("slid.bs.carousel", function(event) {
-                var index = event.to;
-                descripcion.textContent = descripciones[index];
-            });
-        });
-    </script>
 </body>
 
 
